@@ -24,8 +24,7 @@ def child_start():
 
 # poll child process to see if it is running
 def child_running(proc):
-        if proc.poll() != None: return False
-        else: return True
+    return proc.poll() == None    
 
 # wait for the child process to terminate
 def child_wait_for_terminate(proc):
